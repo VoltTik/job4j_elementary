@@ -14,6 +14,15 @@ public class FindLoopTest {
     }
 
     @Test
+    public void whenArrayHas2Then0() {
+        int[] data = {2, 2, 2, 2};
+        int el = 2;
+        int result = FindLoop.indexOf(data, el);
+        int expected = 0;
+        Assert.assertEquals(expected, result);
+    }
+
+    @Test
     public void whenArrayHasNot55ThenMinus1() {
         int[] data = {11, 22, 33, 44};
         int el = 55;
