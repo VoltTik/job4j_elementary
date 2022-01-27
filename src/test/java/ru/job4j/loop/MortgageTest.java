@@ -33,4 +33,14 @@ public class MortgageTest {
         int expected = 100;
         Assert.assertEquals(expected, result);
     }
+
+    @Test
+    public void when99Year() {
+        int amount = 99;
+        int salary = 1;
+        double percent = 0;
+        int result = Mortgage.year(amount, salary, percent);
+        int expected = 99;
+        Assert.assertEquals(expected, result);
+    }
 }
