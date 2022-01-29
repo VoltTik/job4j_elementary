@@ -11,7 +11,6 @@ public class Cryptography {
             }
         }
         s = encrypted.toString();
-        System.out.println(s);
         return s;
     }
 }
