@@ -9,7 +9,7 @@ public class Matrix {
                 array[i][j] = (i + 1) * (j + 1);
                 System.out.print(array[i][j] + "  ");
             }
-            System.out.println("");
+            System.out.println();
         }
         return array;
     }
