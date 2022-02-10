@@ -1,4 +1,4 @@
-package main.java.ru.job4j.math;
+package ru.job4j.math;
 
 public class MathFunction {
 

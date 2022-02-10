@@ -1,12 +1,32 @@
 package ru.job4j.condition;
 
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
+
 public class Point {
 
-    public static double distansce(int x1, int y1, int x2, int y2) {
-        return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+    /**
+     * Это поле объекта. Оно доступно только конкретному объекту.
+     */
+    private int x;
+    /**
+     * Это поле объекта. Оно доступно только конкретному объекту.
+     */
+    private int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public double distance(Point that) {
+        return  sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
     }
 
     public static void main(String[] args) {
-        System.out.println("result (0, 0) to (2, 0) " + Point.distansce(0, 0, 2, 0));
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
+        double dist = a.distance(b);
+        System.out.println(dist);
     }
 }
