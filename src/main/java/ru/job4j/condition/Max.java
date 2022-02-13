@@ -1,12 +1,19 @@
 package ru.job4j.condition;
 
 public class Max {
-   public static int maxOfTwo(int first, int second) {
-       int max = first > second ? first : second;
-       return max;
+   public static int findMax(int first, int second) {
+       return first > second ? first : second;
    }
 
+   public static int findMax(int first, int second, int third) {
+       return findMax(first, findMax(second, third));
+   }
+
+    public static int findMax(int first, int second, int third, int fourth) {
+        return findMax(first, findMax(second, third, fourth));
+    }
+
     public  static void main(String[] args) {
-       System.out.println(Max.maxOfTwo(-5, -6));
+       System.out.println(Max.findMax(-5, -6));
     }
 }
